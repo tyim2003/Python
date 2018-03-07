@@ -1,0 +1,78 @@
+print 5 >> 4  # Right Shift
+print 5 << 1  # Left Shift
+print 8 & 5   # Bitwise AND
+print 9 | 4   # Bitwise OR
+print 12 ^ 42 # Bitwise XOR
+print ~88     # Bitwise NOT
+
+
+
+one = 0b1
+two = 0b10
+three = 0b11
+four = 0b100
+five = 0b101
+six = 0b110
+seven = 0b111
+eight = 0b1000
+nine = 0b1001
+ten = 0b1010
+eleven = 0b1011
+twelve = 0b1100
+
+
+/*  print out the binary representations of the numbers 2 through 5 */
+print bin(1)
+print bin(2)
+print bin(3)
+print bin(4)
+print bin(5)
+
+
+/* Print out the decimal equivalent of the binary numbers */
+print int("1",2)
+print int("10",2)
+print int("111",2)
+print int("0b100",2)
+print int(bin(5),2)
+print int("11001001",2)
+
+
+/* self explanatory */
+
+shift_right = 0b1100
+shift_left = 0b1
+
+shift_right = shift_right >> 2
+shift_left = shift_left << 2
+
+print bin(shift_right)
+print bin(shift_left)
+
+
+
+/* Define a function, check_bit4, with one argument, input, an integer.
+It checks to see if the fourth bit from the right is on. */
+
+def check_bit4(input):
+  mask = 0b1000
+  desired = input & mask
+  if desired > 0:
+    return "on"
+  else:
+    return "off"
+    
+    
+/* Use a bitmask and the value a in order to achieve a result where the third bit from the right of a is turned on.*/
+a = 0b10111011
+mask = 0b00000100
+desired = a | mask
+print bin(desired)
+
+
+/* Define a function called flip_bit that takes the inputs (number, n). Flip the nth bit. */
+
+def flip_bit(number, n):
+  mask = (0b1 << n-1)
+  result = number ^ mask
+  return bin(result)
