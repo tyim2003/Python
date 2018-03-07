@@ -1,0 +1,69 @@
+/* Create a Python dictionary, my_dict */
+
+my_dict = {
+  'name': 'Nick',
+  'age':  31,
+  'occupation': 'Dentist',
+}
+
+/* For each key in my_dict: print out the key , then a space, then the value stored by that key */
+for key in my_dict:
+  print key, my_dict[key]
+
+
+
+/* create a list of even numbers from 0 to 50,
+create a list of doubles by free,
+create a list of even squares,
+create a list of cubes by 4*/
+
+evens_to_50 = [i for i in range(51) if i % 2 == 0]
+print evens_to_50
+
+doubles_by_3 = [x * 2 for x in range(1, 6) if (x * 2) % 3 == 0]
+
+even_squares = [x ** 2 for x in range(1, 12) if x % 2 == 0]
+
+cubes_by_four = [x ** 3 for x in range(1, 11) if ((x ** 3) % 4) == 0]
+print cubes_by_four
+
+
+
+/* list slicing */
+/* [1, 4, 9, 16, 25, 36, 49, 64, 81, 100] */
+l = [i ** 2 for i in range(1, 11)]
+print l[2:9:2]
+/* 1-10 */
+my_list = range(1, 11)
+print my_list[::2]
+
+
+
+/* reverse the list */
+my_list = range(1, 11)
+backwards = my_list[::-1]
+
+to_one_hundred = range(101)
+backwards_by_tens = to_one_hundred[::-10]
+print backwards_by_tens
+
+
+
+/* Create a list, to_21, that's just the numbers from 1 to 21, inclusive.
+Create a second list, odds, that contains only the odd numbers in the to_21 list (1, 3, 5, and so on)
+Create a third list, middle_third, that's equal to the middle third of to_21, from 8 to 14 */
+
+to_21 = range(1, 22)
+odds = to_21[::2]
+middle_third = to_21[7:14]
+
+
+
+  
+/* filter out the "X"s from garbled */
+
+garbled = "IXXX aXXmX aXXXnXoXXXXXtXhXeXXXXrX sXXXXeXcXXXrXeXt mXXeXsXXXsXaXXXXXXgXeX!XX"
+
+message = filter(lambda x: x!="X", garbled)
+
+print message
